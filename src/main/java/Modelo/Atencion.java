@@ -4,7 +4,6 @@
  */
 package Modelo;
 
-import animalpoounidad1.ao_ag.trabajoclases.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
