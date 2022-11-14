@@ -10,12 +10,14 @@ package modelo1;
  */
 public class Estudiante {
     
+    private int codigo;
     private String cedula;
     private String nombre;
 
-    public Estudiante(String cedula, String nombre) {
+    public Estudiante(int codigo,String cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
+        this.codigo = codigo;
     }
 
     public String getCedula() {
@@ -34,9 +36,18 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    
+
     @Override
     public String toString() {
-        return "Estudiante{" + "cedula=" + cedula + ", nombre=" + nombre + '}';
+        return "Estudiante{" + "Codigo =" + codigo +", cedula=" + cedula + ", nombre=" + nombre + '}';
     }
     
     

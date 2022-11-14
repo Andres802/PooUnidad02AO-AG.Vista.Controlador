@@ -4,7 +4,6 @@
  */
 package servicio1;
 
-import java.util.ArrayList;
 import java.util.List;
 import modelo1.Estudiante;
 
@@ -12,23 +11,10 @@ import modelo1.Estudiante;
  *
  * @author ochoa
  */
-public class EstudianteService {
+public interface EstudianteService {
     
-    private List<Estudiante> estudianteList;
-
-    public EstudianteService() {
-        this.estudianteList = new ArrayList<>();
-    }
-    
-    public void crear(Estudiante estudiante){
-        this.estudianteList.add(estudiante);
-    }
-    public List<Estudiante> lista(){
-        return this.estudianteList;
-    }
-    public void eliminarPosicion(int posicion){
-        this.estudianteList.remove(posicion);
-    }
-    
-    
+    public abstract void crear(Estudiante estudiante);
+    public abstract void modificar(int codigo,Estudiante estudianteModificado);
+    public abstract void eliminar(int codigo);
+    public abstract List<Estudiante> listar();
 }

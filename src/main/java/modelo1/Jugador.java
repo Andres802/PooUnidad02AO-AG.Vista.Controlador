@@ -14,14 +14,16 @@ public class Jugador {
     private double peso;
     private int estatura;
     private String nombre;
+    private int codigo;
     private LocalDate fechaNacimiento;
     
 
-    public Jugador(double peso, int estatura, String nombre, LocalDate fechaNacimiento) {
+    public Jugador(int codigo,double peso, int estatura, String nombre, LocalDate fechaNacimiento) {
         this.peso = peso;
         this.estatura = estatura;
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
+        this.codigo = codigo;
     }
     
     public int calcularEdad(){
@@ -85,9 +87,18 @@ public class Jugador {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+    
+
     @Override
     public String toString() {
-        return "Jugador{" + "peso=" + peso + ", estatura=" + estatura + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + '}';
+        return "Jugador{" +"Codigo="+ codigo +"peso=" + peso + ", estatura=" + estatura + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNacimiento + '}';
     }
     
     

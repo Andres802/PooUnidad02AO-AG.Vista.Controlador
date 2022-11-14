@@ -3,30 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package servicio1;
-import java.util.ArrayList;
+
 import java.util.List;
-import modelo1.*;
+import modelo1.Jugador;
+
 /**
  *
  * @author ochoa
  */
-public class JugadorService {
-    
-    private List<Jugador>jugadorList;
+public interface JugadorService {
 
-    public JugadorService() {
-        this.jugadorList = new ArrayList<>();
-        
-    }
-    public void crear(Jugador jugador){
-        
-        this.jugadorList.add(jugador); 
-    }
-    public void eliminarPorPosicion(int posicion){
-        this.jugadorList.remove(posicion);
-    }
-    public List<Jugador> listar(){
-        return this.jugadorList;
-    }
+    public abstract void crear(Jugador jugador);
+    public abstract void modificar(int codigo,Jugador jugadorModificado);
+    public abstract void eliminar(int codigo);
+    public abstract List<Jugador> listar();
     
 }
